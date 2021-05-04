@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- author jael Colima -->
+
+    <script src="js/recipe.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+    
+    <style>
+        body{
+        background-image: url("images/mainBackground.png");
+        font-family: Comic Sans MS;
+        text-align: center;
+    }
+       .jumbotron{
+        background-color: #fff7f5;
+        font-family: Comic Sans MS;
+       }
+       .accordion .fa{
+        margin-right: 0.5rem;
+    }
+    </style>
+    
+</head>
+
+<body>
+   
+
+    <div class="main-container">
+        <div class="jumbotron">
+            <h1>Dinner Helper</h1>
+        </div>
+
+       <nav>
+        <ul class="tabs wrapper">
+
+            <li data-tab-target="#home" class="active tab">Home</li>
+            <li data-tab-target="#chili" class="tab">Crockpot Chili</li>
+            <li data-tab-target="#pizza" class="tab">Pizza Rice</RP></li>
+            <li data-tab-target="#lemonChicken" class="tab">Lemon Chicken Drumsticks</li>
+            
+        </ul>
+     </nav>
+
+        <div class="tab-content">
+            <div id="home" data-tab-content class="active wrapper">
+                <div class="conColor">
+                    <div class="column">
+                        <br>
+                       
+                           <br>
+                           <br>
+                            <div>
+
+                               <h2>Welcome to Recipe helper a website that helps you find last minute dinner ideas! </h2>
+                               <h2> Here are the Recipes we currently have</h2>
+                           </div>
+                           <br>
+                           <br>
+                           <h2>Current recipes:</h2>
+                           <br>
+                        <div>
+                          <div class="gallery">
+                       <figure>
+                        <p>Crockpot chili</p>
+                        <img src="images/chili.jpg" alt="A bowl of chili" height="250px;" data-tab-target="#chili" class="tab"/>
+    
+                       </figure>
+                       <figure>
+                        <p>Pizza Rice</p>
+                      <img src="images/pizzarice.jpg" alt="pizza rice" height="250px;" data-tab-target="#pizza" class="tab" />
+    
+                      </figure>
+                      <figure>
+                        <p>Lemon Chicken</p>
+                      <img src="images/lemonChicken.jpg" alt="Pan with chicken" height="250px;" data-tab-target="#steak" class="tab" />
+   
+                      </figure>
+                    </div>
+                        </div>
+                    </div>
+                   
+                </div>
+               
+            </div>
+
+            <!--Home end-->
+
+            <!--crockpot chili Start-->
+
+            <div id="chili" data-tab-content class="wrapper">
+                <div class="conColor">
+                    <div class="column">
+                        <br>
+                        <h1>Crockpot Chili</h1>
+
+                        
+                        <div class="column">
+                        <p></p>
+                        <img src="images/chili.jpg" height="250px" alt="a bowl of chicken chilli">
+                        <div onchange="chiliRecipe()" name="frmRadio" id="radio-recipe" class="recipe-info" action="">
+                            <h3>Select Serving size</h3>
+                            <br>
+                            <input type="radio" name="chili" value="half" id="half"
+                                onclick="document.getElementById('radio-recipe').action='';">
+                            <label for="half">Half</label>
+                            <input type="radio" name="chili" value="full" id="full"
+                                onclick="document.getElementById('radio-recipe').action='';">
+                            <label for="full">Full</label>
+                            <input type="radio" name="chili" value="double" id="double">
+                            <label for="double">Double</label>
+                            <input type="radio" name="chili" id="" checked style="display: none;">
+                        </div>
+                        <div class="recipe-info" id="chili-info">
+
+                            <p>Serves:</p>
+                            <p>Preparation:</p>
+                            <p>Cooking:</p>
+                            <p>Difficulty:</p>
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+                        <div class="accordion">
+                            <div>
+                                <input type="radio" name="example_accordion" id="section1" class="accordion__input">
+                                <label for="section1" class="accordion__label">Ingredients</label>
+                                <div class="accordion__content">
+                                    <div id="chili-ingredients">
+                                        Please select serving size
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <input type="radio" name="example_accordion" id="section2" class="accordion__input">
+                                <label for="section2" class="accordion__label">Preparation</label>
+                                <div class="accordion__content">
+                                    <div id="chili-prep">
+                                        Please select serving size
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>
+
+                        </p>
+
+                    </div>
+
+
+                
+
+
+
+                    
+                </div>
+               
+            </div>
+
+            <!--Crockpot Chili end-->
+
+            <!-- Pizza rice -->
+             <div id="pizza" data-tab-content class="wrapper">
+                <div class="conColor">
+                    <div class="column">
+                        <br>
+                        <h1>Pizza Rice</h1>
+                    <div>
+                        <p></p>
+                        <img src="images/pizzarice.jpg" height="250px" alt="Rice with sauce and pizza toppings">
+                        <div onchange="pizzaRice()" name="frmRadio" id="radio-recipe" class="recipe-info" action="">
+                            <h3>Please select Serving size</h3>
+                            <input type="radio" name="pizza" value="half" id="pizza-half">
+                            <label for="half">Half</label>
+                            <input type="radio" name="pizza" value="full" id="pizza-full">
+                            <label for="full">Full</label>
+                            <input type="radio" name="pizza" value="double" id="pizza-double">
+                            <label for="double">Double</label>
+                            <input type="radio" name="pizza" id="" checked style="display: none;">
+                        </div>
+                        <div class="recipe-info" id="pizza-info">
+
+                            <p><strong>Serves:</strong></p>
+                            <p><strong>Preparation:</strong></p>
+                            <p><strong>Cooking:</strong></p>
+                            <p><strong>Difficulty:</strong></p>
+
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+                        <div class="accordion">
+                            <div>
+                                <input type="radio" name="example_accordion" id="section3" class="accordion__input">
+                                <label for="section3" class="accordion__label">Ingredients</label>
+                                <div class="accordion__content">
+
+                                    <div id="pizza-ingredients">Please select serving size</div>
+                                </div>
+                            </div>
+                            <div>
+                                <input type="radio" name="example_accordion" id="section4" class="accordion__input">
+                                <label for="section4" class="accordion__label">Preparation</label>
+                                <div class="accordion__content">
+
+                                    <div id="pizza-prep">Please select serving size</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p></p>
+                    </div>
+
+                    </div>
+                </div>
+               
+            </div>
+            <!--end of Pizza rice i know how weird is this one-->
+
+            <!--lemon chicken start-->
+            <div id="lemonChicken" data-tab-content class="wrapper">
+                <div class="conColor">
+                    <div class="column">
+                        <br>
+                       
+                        <h1>Lemon Chicken</h1>
+                           <div class="column">
+                        <p></p>
+                        <img src="images/lemonChicken.jpg" height="250" alt="A sauce pan with Lemon chicken yum">
+                        <div onchange="lemonChicken()" name="frmRadio" id="radio-recipe" class="recipe-info" action="">
+                            <h3>please select Serving size</h3>
+                            <input type="radio" name="lemonChicken" value="half" id="lemonChicken-half">
+                            <label for="half">Half</label>
+                            <input type="radio" name="lemonChicken" value="full" id="lemonChicken-full">
+                            <label for="full">Full</label>
+                            <input type="radio" name="lemonChicken" value="double" id="lemonChicken-double">
+                            <label for="double">Double</label>
+                            <input type="radio" name="lemonChicken" id="" checked style="display: none;">
+                        </div>
+                        <div class="recipe-info" id="lemonChicken-info">
+                            <p><strong>Serves:</strong></p>
+                            <p><strong>Preparation:</strong></p>
+                            <p><strong>Cooking:</strong></p>
+                            <p><strong>Difficulty:</strong></p>
+                        </div>
+
+
+
+                    </div>
+                        <div class="accordion">
+                            <div>
+                                <input type="radio" name="example_accordion" id="section5" class="accordion__input">
+                                <label for="section5" class="accordion__label">Ingredients</label>
+                                <div class="accordion__content">
+
+                                    <div id="lemonChicken-ingredients">
+                                        Please select serving size
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <input type="radio" name="example_accordion" id="section6" class="accordion__input">
+                                <label for="section6" class="accordion__label">Preparation</label>
+                                <div class="accordion__content">
+
+                                    <div id="lemonChicken-prep">
+                                        Please select serving size
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p></p>
+                    </div>
+
+
+                    
+         
+                </div>
+                
+            </div>
+            <!--end of lemon chicken-->
+            
+
+    </div>
+   
+        
+    </script>
+</body>
+
+</html>
